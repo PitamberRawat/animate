@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+section{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    overflow: hidden;
+}
+.row{
+    position: relative;
+    top: -50%;
+    transform: rotate(-30deg);
+}
+i{
+    color: rgba(0, 0, 0, 0.21);
+    margin: 4px;
+    padding: 0 5px;
+    transition: 1s;
+}
+i:hover{
+    transition: 0%;
+    color: #0f0;
+    text-shadow: 0 0 120px #0f0;
+}
+.row div{
+    font-size: 3rem;
+    white-space: nowrap;
+}
+section .row div{
+    animation: animate1 44s linear infinite;
+    animation-delay: -44s;
+}
+section .row div:nth-child(even){
+    animation: animate2 40s linear infinite;
+    animation-delay: -40s;
+}
+@keyframes animate1{
+    0%{
+        transform: translateX(100%);
+    }   
+    100%{
+        transform: translateX(-100%);
+    }
+}
+@keyframes animate2{
+    0%{
+        transform: translateX(-100%);
+    }   
+    100%{
+        transform: translateX(100%);
+    }
+}
